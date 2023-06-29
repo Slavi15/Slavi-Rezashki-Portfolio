@@ -1,0 +1,162 @@
+.container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    position: sticky;
+    overflow: hidden;
+
+    .bioInfo {
+        position: relative;
+        margin: auto 2vw auto 10vw;
+
+        .greeting {
+            font-size: 26px;
+        }
+
+        .name {
+            font-family: 'Covered By Your Grace', cursive;
+            font-size: 70px;
+            white-space: nowrap;
+            margin: 1vh auto;
+        }
+
+        .position {
+            font-size: 26px;
+            color: #57B0C7;
+        }
+
+        .description {
+            margin: 2vh auto;
+        }
+
+        .socialMedia {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 4vh auto;
+
+            .icon {
+                font-size: 24px;
+                -webkit-tap-highlight-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .profileImage {
+        margin: auto 8vw;
+    }
+}
+
+.link {
+    color: #EBF7FF;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        height: 60vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 100%;
+
+        .bioInfo {
+            margin: 8vh 5vw 0;
+
+            .greeting {
+                text-align: center;
+                font-size: 22px;
+            }
+
+            .name {
+                text-align: center;
+                font-size: 55px;
+            }
+
+            .position {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .description {
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+
+        .profileImage {
+            position: absolute;
+            margin: auto;
+            opacity: 0.4;
+            z-index: -1;
+        }
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    .container {
+        height: auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 100%;
+
+        .bioInfo {
+            margin: 8vh 5vw 0;
+
+            .greeting {
+                text-align: center;
+                font-size: 22px;
+            }
+
+            .name {
+                text-align: center;
+                font-size: 60px;
+            }
+
+            .position {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .description {
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+
+        .profileImage {
+            position: absolute;
+            margin: auto;
+            opacity: 0.4;
+            z-index: -1;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    .container {
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .bioInfo {
+            margin: 10vh 5vw 0;
+
+            .greeting, .name, .position, .description {
+                text-align: center;
+            }
+
+            .description {
+                width: 80vw;
+            }
+        }
+
+        .profileImage {
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.certificationContainer {
+    margin-bottom: 4vh;
+
+    .line {
+        width: 85%;
+        height: 1px;
+        margin: 1vh auto;
+        background-color: #276891;
+    }
+
+    .title {
+        font-size: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2vh auto;
+        letter-spacing: 3px;
+    }
+
+    .lineEnd {
+        width: 100%;
+        height: 1px;
+        margin: 1vh auto;
+        background-color: #276891;
+    }
+
+    .skillsItem {
+        .skillsHeader {
+            margin: 1vh auto;
+        }
+
+        .skillBar {
+            position: relative;
+            width: 100%;
+    
+            .barInner {
+                border-bottom: 5px solid #EBF7FF;
+                border-radius: 0;
+    
+                .bar {
+                    width: 0%;
+                    position: absolute;
+                    background-color: #57B0C7;
+                    transition: width 2s ease;
+                    height: 5px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .certificationContainer {
+        .title {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .certificationContainer {
+        .title {
+            font-size: 35px;
+        }
+    }
+}

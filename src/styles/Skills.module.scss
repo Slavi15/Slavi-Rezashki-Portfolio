@@ -1,0 +1,132 @@
+.skillsContainer {
+    margin-bottom: 4vh;
+
+    .line {
+        width: 85%;
+        height: 1px;
+        margin: 1vh auto;
+        background-color: #276891;
+    }
+
+    .title {
+        font-size: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2vh auto;
+        letter-spacing: 3px;
+    }
+
+    .pitch {
+        width: 40vw;
+        text-align: justify;
+        margin: 5vh auto;
+    }
+
+    .skillsCards {
+        width: 70vw;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        margin: 5vh auto;
+
+        .card {
+            box-sizing: unset;
+            padding: 3rem;
+            background-color: #161D28;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            &::before {
+                content: "";
+                padding-bottom: 100%;
+                display: block;
+            }
+            &:hover {
+                transform: perspective(1000px) scale3d(1.05, 1.05, 1.05);
+                transition: transform 500ms;
+            }
+            &:not(:hover) {
+                transform: perspective(1000px);
+                transition: transform 500ms;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .skillsContainer {
+        .title {
+            font-size: 30px;
+        }
+
+        .pitch {
+            width: 70vw;
+        }
+
+        .skillsCards {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            margin-bottom: 10vh;
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 475px) and (max-width: 600px) {
+    .skillsContainer {
+        .title {
+            font-size: 30px;
+        }
+
+        .pitch {
+            width: 70vw;
+        }
+
+        .skillsCards {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            margin-bottom: 10vh;
+
+            .card {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .skillsContainer {
+        .title {
+            font-size: 35px;
+        }
+
+        .pitch {
+            width: 50vw;
+        }
+
+        .skillsCards {
+            display: grid;
+            grid-template-columns: 33.333% 33.333% 33.333%;
+            grid-template-rows: 50% 50%;
+
+            .card {
+                padding: 2.1rem;
+            }
+
+            .card:nth-child(7) {
+                display: none;
+            }
+
+            .card:nth-child(8) {
+                display: none;
+            }
+        }
+    }
+}

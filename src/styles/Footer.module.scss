@@ -1,0 +1,43 @@
+.footer {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    align-items: center;
+
+    .creator {
+        font-size: 14px;
+        justify-self: flex-start;
+        margin-left: 4vw;
+    }
+
+    .portfolioProgrammer {
+        font-family: 'Covered By Your Grace', cursive;
+        font-size: 40px;
+        white-space: nowrap;
+        justify-self: center;
+    }
+
+    .toTop {
+        font-size: 14px;
+        justify-self: flex-end;
+        margin-right: 4vw;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+    }
+
+    .creator, .toTop {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 100%;
+
+        .creator, .toTop {
+            display: none;
+        }
+    }
+}

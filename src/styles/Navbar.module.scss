@@ -1,0 +1,133 @@
+.navbar {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: center;
+    justify-content: space-between;
+
+    .portfolio {
+        margin-left: 4vw;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .menuContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 4vw;
+
+        .darkModeToggle {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .resumeButton {
+            height: 40px;
+            width: 110px;
+            background: linear-gradient(45deg, #57B0C7 0%, #276891 100%);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            color: #EBF7FF;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    // .menuContainer {
+    //     display: grid;
+    //     grid-template-columns: 20% 80%;
+    //     justify-items: center;
+    //     align-items: center;
+    //     margin-right: 4vw;
+
+    //     .darkModeToggle {
+    //         font-size: 20px;
+    //         cursor: pointer;
+    //     }
+
+    //     .langToggle {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-evenly;
+
+    //         .lang {
+    //             margin: auto 1vw;
+    //             cursor: pointer;
+    //         }
+
+    //         .toggle {
+    //             position: relative;
+    //             display: flex;
+    //             overflow: hidden;
+    //             width: 50px;
+    //             height: 2px;
+    //             -webkit-box-pack: start;
+    //             justify-content: flex-start;
+    //             -moz-box-align: center;
+    //             align-items: center;
+    //             background-color: #333;
+
+    //             .toggleBack {
+    //                 position: absolute;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 background-color: rgba(206, 201, 201, 0.3);
+    //             }
+
+    //             .toggleFront {
+    //                 position: relative;
+    //                 width: 50%;
+    //                 height: 100%;
+    //                 background-color: #cec9c9;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 100%;
+
+        .portfolio {
+            display: none;
+        }
+
+        .menuContainer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 0;
+
+            .resumeButton {
+                margin-left: 4vw;
+            }
+
+            .darkModeToggle {
+                margin-right: 4vw;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 950px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 70% 30%;
+
+        .menuContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-right: 4vw;
+        }
+    }
+}
