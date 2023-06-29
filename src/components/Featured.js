@@ -168,6 +168,7 @@ const Featured = () => {
                                         <Image
                                             className='img'
                                             src={teenovatorFinal}
+                                            priority={true}
                                             alt='Teenovator 2021 Final' />
                                     </div>
                                 </Link>
@@ -192,6 +193,7 @@ const Featured = () => {
                                         <Image
                                             className='img'
                                             src={teenovatorRecursive}
+                                            priority={true}
                                             alt='Teenovator Recursive' />
                                     </div>
                                 </Link>
@@ -215,6 +217,7 @@ const Featured = () => {
                                         <Image
                                             className='img'
                                             src={telerikAcademy}
+                                            priority={true}
                                             alt='Telerik Academy' />
                                     </div>
                                 </Link>
