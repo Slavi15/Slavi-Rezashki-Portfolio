@@ -5,7 +5,6 @@ import Certification from '@/components/Certification';
 import Featured from '@/components/Featured';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-// import styles from '../styles/page.module.scss';
 
 function App() {
   return (
