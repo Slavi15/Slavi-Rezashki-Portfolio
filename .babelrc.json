@@ -14,5 +14,9 @@
             }
         ]
     ],
-    "plugins": []
+    "env": {
+        "development": {
+            "compact": true
+        }
+    }
 }
