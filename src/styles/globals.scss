@@ -3,9 +3,19 @@ $lightBlue: #57B0C7;
 $blue: #276891;
 $black: #0D0C1D;
 
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.ttf');
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+  font-family: 'Covered By Your Grace';
+  src: url('/fonts/CoveredByYourGrace-Regular.ttf');
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
 
 html, body {
   padding: 0;
@@ -17,10 +27,6 @@ html, body {
   background-color: #0D0C1D;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
-}
-
-*, :after, :before {
-  box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {

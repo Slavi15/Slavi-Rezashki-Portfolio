@@ -11,7 +11,8 @@
                 "preset-react": {
                     "throwIfNamespace": false
                 }
-            }
+            },
+            "@babel/preset-typescript"
         ]
     ],
     "env": {
