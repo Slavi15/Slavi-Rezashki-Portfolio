@@ -25,7 +25,7 @@ const Featured = () => {
                 newsItems.forEach((element, index) => {
                     element.addEventListener('mouseover', function () {
                         let x = this.getBoundingClientRect().left;
-                        let y = this.getBoundingClientRect().top;
+                        // let y = this.getBoundingClientRect().top;
                         let width = this.getBoundingClientRect().width;
                         // let height = this.getBoundingClientRect().height;
 
@@ -90,7 +90,7 @@ const Featured = () => {
                     $('.swiper-slide-active .news_item').addClass('active');
 
                     let x = sliderItem.getBoundingClientRect().left;
-                    let y = sliderItem.getBoundingClientRect().top;
+                    // let y = sliderItem.getBoundingClientRect().top;
                     let width = sliderItem.getBoundingClientRect().width;
                     // let height = sliderItem.getBoundingClientRect().height;
 
@@ -121,7 +121,7 @@ const Featured = () => {
             $('.swiper-slide-active .news_item').addClass('active');
 
             let x = sliderItem.getBoundingClientRect().left;
-            let y = sliderItem.getBoundingClientRect().top;
+            // let y = sliderItem.getBoundingClientRect().top;
             let width = sliderItem.getBoundingClientRect().width;
             // let height = sliderItem.getBoundingClientRect().height;
 

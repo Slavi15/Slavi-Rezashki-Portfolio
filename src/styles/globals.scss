@@ -4,11 +4,8 @@ $blue: #276891;
 $black: #0D0C1D;
 
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-*, :after, :before {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html, body {
   padding: 0;
@@ -20,6 +17,10 @@ html, body {
   background-color: #0D0C1D;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {
