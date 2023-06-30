@@ -141,7 +141,7 @@ const Featured = () => {
                     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
                 </link>
             </Head>
-            <div className="honorsAwardsContainer">
+            <div className="featuredContainer">
                 <div className="title">Featured</div>
 
                 <div className='wrapper'>
