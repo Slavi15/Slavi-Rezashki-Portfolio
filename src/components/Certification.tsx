@@ -5,13 +5,13 @@ import styles from '../styles/Certification.module.scss';
 
 const Certification = () => {
     useEffect(() => {
-        const bars = document.querySelectorAll('#bar');
+        const bars = document.querySelectorAll<HTMLElement>('#bar');
         const widthArray = ['95%', '92%', '100%', '96%', '90%', '95%'];
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = widthArray[entry.target.dataset.index];
+                if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+                    entry.target.style.width = widthArray[Number(entry.target.dataset.index)];
                 };
             });
         }, {
@@ -95,7 +95,7 @@ const Certification = () => {
                             <h3 className="timeline-title">C1 Advanced English | Cambridge Assessment English</h3>
                             <div>
                                 <div className={styles.skillsItem}>
-                                    <div className={styles.skillsHeader}>Overall Score | 199 / 210</div>
+                                    <div className={styles.skillsHeader}>Overall Score | 200 / 210</div>
                                     <div className={styles.skillBar}>
                                         <div className={styles.barInner}>
                                             <div id="bar" data-index={0} className={styles.bar}></div>

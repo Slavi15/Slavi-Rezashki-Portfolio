@@ -1,13 +1,14 @@
-import ClientComponent from './ClientComponent.js';
-import Navbar from '@/components/Navbar';
+import { Metadata } from 'next';
+import ClientComponent from './ClientComponent.tsx';
+import Navbar from '../components/Navbar.tsx';
 import '../styles/globals.scss';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Slavi Rezashki - Official Website - Software Engineer',
   description: 'Slavi Rezashki Personal Portfolio Website 2023',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body>

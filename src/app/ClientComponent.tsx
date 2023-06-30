@@ -1,28 +1,27 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const ClientComponent = ({ children }) => {
+const ClientComponent = ({ children }: { children: React.ReactNode }) => {
     const [dark, setDark] = useState(true);
 
     useEffect(() => {
-        const linkMedia = Array.from(document.getElementsByClassName('Home_link__nF9qd'));
-        const darkModeToggle = document.getElementById('darkModeToggle');
+        const linkMedia = Array.from(document.getElementsByClassName('Home_link__nF9qd') as HTMLCollectionOf<HTMLElement>);
+        const darkModeToggle = document.getElementById('darkModeToggle') as HTMLDivElement;
 
-        const linkEducation = Array.from(document.getElementsByClassName('Education_link__eVAoA'));
-        const educationContainer = Array.from(document.getElementsByClassName('Education_educationCard__9bt7q'));
+        const linkEducation = Array.from(document.getElementsByClassName('Education_link__eVAoA') as HTMLCollectionOf<HTMLElement>);
+        const educationContainer = Array.from(document.getElementsByClassName('Education_educationCard__9bt7q') as HTMLCollectionOf<HTMLElement>);
 
-        const skillsContainer = Array.from(document.getElementsByClassName('Skills_card__C19AD'));
+        const skillsContainer = Array.from(document.getElementsByClassName('Skills_card__C19AD') as HTMLCollectionOf<HTMLElement>);
 
-        const newsItems = document.querySelectorAll('.news_item');
-        const newsItemActive = document.querySelector('.news_item.active');
-        const backgroundItem = document.querySelector('.item-bg');
-        const arrows = document.querySelectorAll('.news-slider_arrow');
-        const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+        const newsItems = document.querySelectorAll<HTMLElement>('.news_item');
+        const backgroundItem = document.querySelector('.item-bg') as HTMLDivElement;
+        const arrows = document.querySelectorAll<HTMLButtonElement>('.news-slider_arrow');
+        const bullets = document.querySelectorAll<HTMLDivElement>('.swiper-pagination-bullet');
 
-        const form = document.querySelector('.Contact_form__VaXHx');
-        const fields = Array.from(document.getElementsByClassName('Contact_field__kqYBX'));
-        const textarea = document.querySelector('.Contact_textarea__tfBeb');
+        const form = document.querySelector('.Contact_form__VaXHx') as HTMLFormElement;
+        const fields = Array.from(document.getElementsByClassName('Contact_field__kqYBX') as HTMLCollectionOf<HTMLElement>);
+        const textarea = document.querySelector('.Contact_textarea__tfBeb') as HTMLTextAreaElement;
 
         darkModeToggle.addEventListener('click', function () {
             if (dark === true) {
@@ -42,12 +41,12 @@ const ClientComponent = ({ children }) => {
                 educationContainer.forEach(el => {
                     if (window.innerWidth <= 925) {
                         el.style.backgroundColor = '#F5F5F5';
-                        el.children[0].style.border = 'none';
-                        el.children[1].style.color = '#282828';
+                        (el.children[0] as HTMLElement).style.border = 'none';
+                        (el.children[1] as HTMLElement).style.color = '#282828';
                     } else {
                         el.style.backgroundColor = '#F5F5F5';
-                        el.children[0].style.borderRight = '2px solid #ccc';
-                        el.children[1].style.color = '#282828';
+                        (el.children[0] as HTMLElement).style.borderRight = '2px solid #ccc';
+                        (el.children[1] as HTMLElement).style.color = '#282828';
                     };
                 });
 
@@ -77,7 +76,7 @@ const ClientComponent = ({ children }) => {
 
                 arrows.forEach(arrow => {
                     arrow.style.backgroundColor = '#161D28';
-                    arrow.children[0].children[0].style.fill = '#EBF7FF';
+                    (arrow.children[0].children[0] as HTMLElement).style.fill = '#EBF7FF';
                 });
 
                 bullets.forEach(bullet => {
@@ -110,12 +109,12 @@ const ClientComponent = ({ children }) => {
                 educationContainer.forEach(el => {
                     if (window.innerWidth <= 925) {
                         el.style.backgroundColor = '#161D28';
-                        el.children[0].style.border = 'none';
-                        el.children[1].style.color = '#B1BED1';
+                        (el.children[0] as HTMLElement).style.border = 'none';
+                        (el.children[1] as HTMLElement).style.color = '#B1BED1';
                     } else {
                         el.style.backgroundColor = '#161D28';
-                        el.children[0].style.borderRight = '2px solid #191f2b';
-                        el.children[1].style.color = '#B1BED1';
+                        (el.children[0] as HTMLElement).style.borderRight = '2px solid #191f2b';
+                        (el.children[1] as HTMLElement).style.color = '#B1BED1';
                     };
                 });
 
@@ -145,7 +144,7 @@ const ClientComponent = ({ children }) => {
 
                 arrows.forEach(arrow => {
                     arrow.style.backgroundColor = '#EBF7FF';
-                    arrow.children[0].children[0].style.fill = '#0D0C1D';
+                    (arrow.children[0].children[0] as HTMLElement).style.fill = '#0D0C1D';
                 });
 
                 bullets.forEach(bullet => {

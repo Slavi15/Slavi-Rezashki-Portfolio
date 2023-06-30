@@ -14,26 +14,26 @@ import telerikAcademy from '../images/telerik_academy.jpg';
 
 const Featured = () => {
     useEffect(() => {
-        const bg = document.querySelector('.item-bg');
+        const bg = document.querySelector('.item-bg') as HTMLDivElement;
         // const items = document.querySelectorAll('.news_item');
         // const item = document.querySelector('.news_item');
 
-        if ($(window).width() > 800) {
+        if ($(window).width()! > 800) {
             $(document).on("mouseover", ".news_item", function (_event, _element) {
-                const newsItems = document.querySelectorAll('.news_item');
+                const newsItems = document.querySelectorAll<HTMLElement>('.news_item');
 
                 newsItems.forEach((element, index) => {
                     element.addEventListener('mouseover', function () {
                         let x = this.getBoundingClientRect().left;
                         let y = this.getBoundingClientRect().top;
                         let width = this.getBoundingClientRect().width;
-                        let height = this.getBoundingClientRect().height;
+                        // let height = this.getBoundingClientRect().height;
 
                         $('.item-bg').addClass('active');
                         $('.news_item').removeClass('active');
 
                         bg.style.width = `${width}px`;
-                        bg.style.height = `${height}px`;
+                        // bg.style.height = `${height}px`;
                         bg.style.transform = `translateX(${x}px) translateY(0px)`;
                     });
 
@@ -45,6 +45,7 @@ const Featured = () => {
             });
         };
 
+        // @ts-ignore: disable-next-line
         const swiper = new Swiper('.news-slider', {
             effect: 'coverflow',
             grabCursor: true,
@@ -83,20 +84,20 @@ const Featured = () => {
             },
             on: {
                 init: function () {
-                    let activeItem = document.querySelector('.swiper-slide-active');
-                    let sliderItem = activeItem.querySelector('.news_item');
+                    let activeItem = document.querySelector('.swiper-slide-active') as HTMLElement;
+                    let sliderItem = activeItem.querySelector('.news_item') as HTMLElement;
 
                     $('.swiper-slide-active .news_item').addClass('active');
 
                     let x = sliderItem.getBoundingClientRect().left;
                     let y = sliderItem.getBoundingClientRect().top;
                     let width = sliderItem.getBoundingClientRect().width;
-                    let height = sliderItem.getBoundingClientRect().height;
+                    // let height = sliderItem.getBoundingClientRect().height;
 
                     $('.item-bg').addClass('active');
 
                     bg.style.width = `${width}px`;
-                    bg.style.height = `${height}px`;
+                    // bg.style.height = `${height}px`;
                     bg.style.transform = `translateX(${x}px) translateY(0px)`;
                 }
             }
@@ -114,20 +115,20 @@ const Featured = () => {
         swiper.on('slideChangeTransitionEnd', function () {
             $('.news_item').removeClass('active');
 
-            let activeItem = document.querySelector('.swiper-slide-active');
-            let sliderItem = activeItem.querySelector('.news_item');
+            let activeItem = document.querySelector('.swiper-slide-active') as HTMLElement;
+            let sliderItem = activeItem.querySelector('.news_item') as HTMLElement;
 
             $('.swiper-slide-active .news_item').addClass('active');
 
             let x = sliderItem.getBoundingClientRect().left;
             let y = sliderItem.getBoundingClientRect().top;
             let width = sliderItem.getBoundingClientRect().width;
-            let height = sliderItem.getBoundingClientRect().height;
+            // let height = sliderItem.getBoundingClientRect().height;
 
             $('.item-bg').addClass('active');
 
             bg.style.width = `${width}px`;
-            bg.style.height = `${height}px`;
+            // bg.style.height = `${height}px`;
             bg.style.transform = `translateX(${x}px) translateY(0px)`;
         });
     }, []);
@@ -246,7 +247,7 @@ const Featured = () => {
                     </div>
                 </div>
 
-                <svg hidden="hidden">
+                <svg visibility="hidden">
                     <defs>
                         <symbol id="icon-arrow-left" viewBox="0 0 32 32">
                             <title>arrow-left</title>

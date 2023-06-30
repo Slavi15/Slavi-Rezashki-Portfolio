@@ -5,7 +5,7 @@ import styles from '../styles/Footer.module.scss';
 
 const Footer = () => {
     useEffect(() => {
-        const button = document.getElementById('btn');
+        const button = document.getElementById('btn') as HTMLElement;
 
         button.addEventListener('click', function() {
             document.body.scrollIntoView();

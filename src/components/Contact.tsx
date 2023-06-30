@@ -35,6 +35,9 @@ const Contact = () => {
                         .required('Required field!'),
                     subject: Yup.string()
                         .min(10, 'Minimum 10 characters required!')
+                        .required('Required field!'),
+                    content: Yup.string()
+                        .min(10, 'Minimum 10 characters required!')
                         .required('Required field!')
                 })}
                 onSubmit={async (values) => {
@@ -53,18 +56,18 @@ const Contact = () => {
                             'Content-Type': 'application/json'
                         }
                     })
-                    .then(data => {
-                        if (data) {
-                            const successElement = document.getElementById('success');
-                            successElement.textContent = 'Thanks! The message has been delivered!';
-                            if (successElement.textContent) {
-                                setTimeout(() => {
-                                    window.location.reload();
-                                }, 1000);
+                        .then(data => {
+                            if (data) {
+                                const successElement = document.getElementById('success') as HTMLDivElement;
+                                successElement.textContent = 'Thanks! The message has been delivered!';
+                                if (successElement.textContent) {
+                                    setTimeout(() => {
+                                        window.location.reload();
+                                    }, 1000);
+                                };
                             };
-                        };
-                    })
-                    .catch(err => console.log(err));
+                        })
+                        .catch(err => console.log(err));
                 }}>
                 {({ isSubmitting }) => (
                     <Form className={styles.form}>
@@ -101,8 +104,8 @@ const Contact = () => {
                         </div>
 
                         <label id="label" htmlFor="content">Message</label>
-                        <Field 
-                            className={styles.textarea} 
+                        <Field
+                            className={styles.textarea}
                             component="textarea"
                             name="content"
                             type="text" />
@@ -110,11 +113,11 @@ const Contact = () => {
                             <ErrorMessage name="content" />
                         </div>
 
-                        <button className={styles.button} type="submit">Send</button>
+                        <button className={styles.button}
+                            disabled={isSubmitting}
+                            type="submit">Send</button>
 
-                        <div id="success"
-                            disabled={isSubmitting} 
-                            className={styles.success}></div>
+                        <div id="success" className={styles.success}></div>
                     </Form>
                 )}
             </Formik>

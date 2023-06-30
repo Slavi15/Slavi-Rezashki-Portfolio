@@ -1,11 +1,13 @@
+import { NextRequest } from 'next/server';
+import type { NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export async function POST(request, response) {
+export async function POST(request: NextRequest, response: NextApiResponse) {
     const res = await request.json();
 
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        post: 465,
+        port: 465,
         secure: true,
         auth: {
             user: 'slavishkolo@gmail.com',
@@ -21,7 +23,7 @@ export async function POST(request, response) {
             text: `Email sent by: ${res.email}\n${res.content}`,
             html: `
                 <div>
-                    <p style="font-family: 'Verdana';">Email sent by: ${res.email} | ${res.name}</p>
+                    <pre style="font-family: 'Verdana';">From:\nEmail: ${res.email}\nName: ${res.name}</pre>
                     <hr>
                     <div style="font-family: 'Verdana'; font-size: 16px; font-weight: 400;">Subject: ${res.subject}</div>
                     <br>
