@@ -13,10 +13,5 @@
                 }
             }
         ]
-    ],
-    "env": {
-        "development": {
-            "compact": true
-        }
-    }
+    ]
 }
