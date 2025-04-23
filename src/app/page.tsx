@@ -7,17 +7,17 @@ import Contact from '../components/Contact.tsx';
 import Footer from '../components/Footer.tsx';
 
 function App() {
-  return (
-    <main>
-      <Home />
-      <Education />
-      <Skills />
-      <Certification />
-      <Featured />
-      <Contact />
-      <Footer />
-    </main>
-  );
+	return (
+		<main>
+			<Home />
+			<Education />
+			<Featured />
+			<Certification />
+			<Skills />
+			<Contact />
+			<Footer />
+		</main>
+	);
 };
 
 export default App;

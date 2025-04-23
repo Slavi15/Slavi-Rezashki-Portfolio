@@ -8,6 +8,7 @@ import Script from 'next/script';
 import $ from 'jquery';
 import '../styles/Featured.scss';
 
+import fmiCodes from '../images/fmicodes2024.png'
 import teenovatorFinal from '../images/teenovator_final.jpg';
 import teenovatorRecursive from '../images/teenovator_recursive.png';
 import telerikAcademy from '../images/telerik_academy.jpg';
@@ -149,6 +150,28 @@ const Featured = () => {
 
                     <div className='news-slider'>
                         <div className='news-slider_wrp swiper-wrapper'>
+                        <div className='news-slider_item swiper-slide'>
+                                <Link className='link news_item' href="https://fmicodes.com/en?trk=public_post-text" target='_blank'>
+                                    <div className='news-date'>
+                                        <span className='news-date_title'>2024</span>
+                                        <span className='news-date_txt'>March 17</span>
+                                    </div>
+                                    <div className='news_title'>
+                                        {`FMI {Codes} Hackathon "Code for Science" 2024`}
+                                    </div>
+                                    <p className='news_txt'>
+                                    Second Place at "Code for Connection 2024" FMI Hackathon, 
+                                    organized by Faculty Students’ Council
+                                    </p>
+                                    <div className='news_img'>
+                                        <Image
+                                            className='img'
+                                            src={fmiCodes}
+                                            priority={true}
+                                            alt='FMI {Codes} Hackaton 2024' />
+                                    </div>
+                                </Link>
+                            </div>
                             <div className='news-slider_item swiper-slide'>
                                 <Link className='link news_item' href="https://darik.bg/tiinovator-uikend-na-ideite-v-novi-horizonti-s-lili" target='_blank'>
                                     <div className='news-date'>

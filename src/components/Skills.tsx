@@ -1,4 +1,5 @@
-import { SiJavascript, SiNodedotjs, SiReact, SiVuedotjs, SiCplusplus, SiPython, SiNextdotjs, SiGit } from 'react-icons/si';
+import { SiJavascript, SiNodedotjs, SiReact, SiVuedotjs, SiCplusplus, SiNextdotjs, SiHaskell, SiGit } from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
 import styles from '../styles/Skills.module.scss';
 
 const Skills = () => {
@@ -20,6 +21,16 @@ const Skills = () => {
                 make a lasting impact in the world of technology and science.
             </div>
             <div className={styles.skillsCards}>
+                <SiCplusplus
+                    className={styles.card}
+                    style={{
+                        fontSize: '5rem'
+                    }} />
+                <FaJava
+                    className={styles.card}
+                    style={{
+                        fontSize: '5rem'
+                    }} />
                 <SiJavascript
                     className={styles.card}
                     style={{
@@ -30,7 +41,7 @@ const Skills = () => {
                     style={{
                         fontSize: '5rem'
                     }} />
-                <SiVuedotjs
+                <SiNextdotjs
                     className={styles.card}
                     style={{
                         fontSize: '5rem'
@@ -40,17 +51,7 @@ const Skills = () => {
                     style={{
                         fontSize: '5rem'
                     }} />
-                <SiCplusplus
-                    className={styles.card}
-                    style={{
-                        fontSize: '5rem'
-                    }} />
-                <SiNextdotjs
-                    className={styles.card}
-                    style={{
-                        fontSize: '5rem'
-                    }} />
-                <SiPython
+                <SiHaskell
                     className={styles.card}
                     style={{
                         fontSize: '5rem'

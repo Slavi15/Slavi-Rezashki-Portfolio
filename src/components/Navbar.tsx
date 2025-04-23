@@ -7,7 +7,7 @@ import styles from '../styles/Navbar.module.scss';
 const Navbar = () => {
     return (
         <div className={styles.navbar}>
-            <div className={styles.portfolio}>Portfolio © 2023</div>
+            <div className={styles.portfolio}>Portfolio © 2025</div>
             <div className={styles.menuContainer}>
                 <div id="darkModeToggle" className={styles.darkModeToggle}><BsCircleHalf /></div>
                 <Link href="/documents/Slavi_Rezashki_Resume.pdf"
