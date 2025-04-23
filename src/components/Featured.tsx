@@ -143,6 +143,7 @@ const Featured = () => {
                 </link>
             </Head>
             <div className="featuredContainer">
+                <div className="line"></div>
                 <div className="title">Featured</div>
 
                 <div className='wrapper'>
@@ -150,7 +151,7 @@ const Featured = () => {
 
                     <div className='news-slider'>
                         <div className='news-slider_wrp swiper-wrapper'>
-                        <div className='news-slider_item swiper-slide'>
+                            <div className='news-slider_item swiper-slide'>
                                 <Link className='link news_item' href="https://fmicodes.com/en?trk=public_post-text" target='_blank'>
                                     <div className='news-date'>
                                         <span className='news-date_title'>2024</span>
@@ -160,8 +161,8 @@ const Featured = () => {
                                         {`FMI {Codes} Hackathon "Code for Science" 2024`}
                                     </div>
                                     <p className='news_txt'>
-                                    Second Place at "Code for Connection 2024" FMI Hackathon, 
-                                    organized by Faculty Students’ Council
+                                        Second Place at "Code for Connection 2024" FMI Hackathon,
+                                        organized by Faculty Students’ Council
                                     </p>
                                     <div className='news_img'>
                                         <Image
@@ -207,10 +208,10 @@ const Featured = () => {
                                         What future do Bulgarian Gen Z entrepreneurs want to create?
                                     </div>
                                     <p className='news_txt'>
-                                        UniFruit is a Gen Z project, aiming to develop the 
-                                        technology for bringing back to the Earth satellites 
-                                        who have completed their space mission. UniFruit’s idea 
-                                        strives to tackle the issue of excessive debris pollution 
+                                        UniFruit is a Gen Z project, aiming to develop the
+                                        technology for bringing back to the Earth satellites
+                                        who have completed their space mission. UniFruit’s idea
+                                        strives to tackle the issue of excessive debris pollution
                                         in space, as well as
                                     </p>
                                     <div className='news_img'>
@@ -233,8 +234,8 @@ const Featured = () => {
                                     </div>
                                     <p className='news_txt'>
                                         Third Place at Annual Competition for Game Development.
-                                        The competition encourages students to develop practical 
-                                        programming experience and improve their skills to 
+                                        The competition encourages students to develop practical
+                                        programming experience and improve their skills to
                                         realize and present their ideas through projects.
                                     </p>
                                     <div className='news_img'>
@@ -283,8 +284,8 @@ const Featured = () => {
                     </defs>
                 </svg>
             </div>
-            <Script 
-                src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js' 
+            <Script
+                src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'
                 strategy='beforeInteractive'></Script>
         </>
     );
